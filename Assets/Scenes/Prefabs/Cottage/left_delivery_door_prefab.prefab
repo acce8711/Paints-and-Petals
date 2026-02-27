@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7a8a2a3a81c29674f864ac8c5e49f582, type: 3}
       propertyPath: m_Name
-      value: left_delivery_door
+      value: left_delivery_door_model
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

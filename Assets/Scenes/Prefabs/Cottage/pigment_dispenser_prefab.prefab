@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc9d2218906a5db43a294624ce2e8ad5, type: 3}
       propertyPath: m_Name
-      value: pigment_dispenser
+      value: pigment_dispenser_model
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
