@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6909329851536511513}
   - component: {fileID: 7656683791935521813}
   - component: {fileID: 8277160285318814033}
+  - component: {fileID: 4227189711897938743}
+  - component: {fileID: 1817322011355158996}
   m_Layer: 0
   m_Name: pigment_dispenser_prefab
-  m_TagString: Untagged
+  m_TagString: PigmentDispenser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,10 +33,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 561276282211092771}
   - {fileID: 7478705757460660903}
   - {fileID: 8330198290372435472}
   - {fileID: 1200160739663437803}
+  - {fileID: 467221463295839271}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7656683791935521813
@@ -133,7 +135,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4227189711897938743}
+        m_TargetAssemblyTypeName: Pigment, Assembly-CSharp
+        m_MethodName: DispensePigment
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -217,6 +231,42 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &4227189711897938743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772695326062366841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66dac85933735b4caaff55887f30331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pigment_type: 0
+  colour_mixing_bucket_socket: {fileID: 0}
+  pigment_cylinder: {fileID: 8731276670852118754}
+--- !u!65 &1817322011355158996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772695326062366841}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 0.04, z: 0.1}
+  m_Center: {x: 0, y: -0.11, z: 0}
 --- !u!1 &2057609626570001413
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,11 +294,11 @@ Transform:
   m_GameObject: {fileID: 2057609626570001413}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0004, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0993, z: 0}
   m_LocalScale: {x: 0.07184566, y: 0.09925948, z: 0.07184566}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 6909329851536511513}
+  m_Father: {fileID: 467221463295839271}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7071073210100750075
 MeshFilter:
@@ -386,6 +436,38 @@ CapsuleCollider:
   m_Height: 0.28
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8731276670852118754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467221463295839271}
+  m_Layer: 0
+  m_Name: pigment_cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467221463295839271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731276670852118754}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 561276282211092771}
+  m_Father: {fileID: 6909329851536511513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6936399113753847116
 PrefabInstance:
   m_ObjectHideFlags: 0

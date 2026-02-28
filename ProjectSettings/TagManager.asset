@@ -9,6 +9,7 @@ TagManager:
   - FlowerYellow
   - FlowerWhite
   - FlowerBlack
+  - PigmentDispenser
   layers:
   - Default
   - TransparentFX
