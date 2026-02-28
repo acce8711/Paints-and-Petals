@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PigmentCountUI : MonoBehaviour
 {
@@ -13,5 +14,10 @@ public class PigmentCountUI : MonoBehaviour
     {
         colour_count++;
         colour_count_text.text = colour_count.ToString();
+    }
+
+    public void SetColour(Color colour_to_set)
+    {
+        gameObject.GetComponent<Image>().color = colour_to_set;
     }
 }

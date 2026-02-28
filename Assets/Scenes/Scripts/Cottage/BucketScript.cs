@@ -99,6 +99,7 @@ public class BucketScript : MonoBehaviour
             if(added_pigments_UI[pigment_type] == null)
             {
                 added_pigments_UI[pigment_type] = Instantiate(pigment_count_UI_prefab, pigment_colours_UI_panel);
+                added_pigments_UI[pigment_type].GetComponent<PigmentCountUI>().SetColour(PIGMENT_COLOURS[pigment_type]);
             } 
             
             //increase the colour count displayed in the colour UI count circle
