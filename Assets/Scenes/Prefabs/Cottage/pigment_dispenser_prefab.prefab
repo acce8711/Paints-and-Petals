@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 7071073210100750075}
   - component: {fileID: 226822457782425284}
   m_Layer: 0
-  m_Name: paint_amount
+  m_Name: paint_amount - DO NOT MODIFY SCALE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467221463295839271}
   m_Layer: 0
-  m_Name: pigment_cylinder
+  m_Name: pigment_cylinder - SCALE THIS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
