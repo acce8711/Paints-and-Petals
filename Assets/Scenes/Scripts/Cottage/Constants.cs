@@ -24,4 +24,6 @@ public static class Constants
     };
 
     public const string PIGMENT_DISPENSER_TAG = "PigmentDispenser";
+
+    public const float ADD_ANIMATION_LENGTH = 0.5f;
 }

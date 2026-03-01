@@ -1047,7 +1047,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4
   m_AttachTransform: {fileID: 1702314362}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -1169,8 +1169,16 @@ PrefabInstance:
       value: pigment_dispenser_prefab - blue
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: player_pos
+      value: 
+      objectReference: {fileID: 1756691642}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: pigment_type
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: accepted_flower_tag
+      value: FlowerBlue
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: colour_mixing_bucket_socket
@@ -2442,8 +2450,16 @@ PrefabInstance:
       value: pigment_dispenser_prefab - yellow
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: player_pos
+      value: 
+      objectReference: {fileID: 1756691642}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: pigment_type
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: accepted_flower_tag
+      value: FlowerYellow
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: colour_mixing_bucket_socket
@@ -2891,9 +2907,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: pigment_dispenser_prefab - red
       objectReference: {fileID: 0}
+    - target: {fileID: 1294114853934958079, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439564404764927538, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: highlighted_shader
+      value: 
+      objectReference: {fileID: 10764, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: player_pos
+      value: 
+      objectReference: {fileID: 1756691642}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: pigment_type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: accepted_flower_tag
+      value: FlowerRed
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: colour_mixing_bucket_socket
@@ -4627,8 +4659,16 @@ PrefabInstance:
       value: pigment_dispenser_prefab - white
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: player_pos
+      value: 
+      objectReference: {fileID: 1756691642}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: pigment_type
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: accepted_flower_tag
+      value: FlowerWhite
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: colour_mixing_bucket_socket
@@ -4955,7 +4995,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4
   m_AttachTransform: {fileID: 120939682}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -5088,8 +5128,16 @@ PrefabInstance:
       value: pigment_dispenser_prefab - black
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: player_pos
+      value: 
+      objectReference: {fileID: 1756691642}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: pigment_type
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: accepted_flower_tag
+      value: FlowerBlack
       objectReference: {fileID: 0}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: colour_mixing_bucket_socket
@@ -6095,7 +6143,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4
   m_AttachTransform: {fileID: 500819642}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -8660,7 +8708,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4
   m_AttachTransform: {fileID: 544406850}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -11464,7 +11512,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4
   m_AttachTransform: {fileID: 4092630518984075742}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1

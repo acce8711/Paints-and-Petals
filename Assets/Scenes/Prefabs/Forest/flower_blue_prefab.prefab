@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 5775037016148880574}
   - component: {fileID: 5896623024851177449}
   - component: {fileID: 853812576401457572}
+  - component: {fileID: 4263756256904909228}
   m_Layer: 0
   m_Name: flower_blue_prefab
   m_TagString: FlowerBlue
@@ -184,7 +185,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4263756256904909228}
+        m_TargetAssemblyTypeName: Flower, Assembly-CSharp
+        m_MethodName: ConvertToPigment
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -268,6 +281,18 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &4263756256904909228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377149610486823848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656e921e56b5f8749b75a97f44af88d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3609588541492897388
 PrefabInstance:
   m_ObjectHideFlags: 0
