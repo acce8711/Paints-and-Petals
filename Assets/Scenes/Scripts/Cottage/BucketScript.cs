@@ -7,11 +7,6 @@ using Scrtwpns.Mixbox;
 
 public class BucketScript : MonoBehaviour
 {
-
-    public GameObject bucketPrefab;
-    public Vector3 bucketTransform = new Vector3(2.148f, 1.0853f, 1.8135f);
-    public bool bucketSummoned = false;
-
     //this gameobject can be activated have its y scaled gradually to simulate solvent+binder pouring
     [SerializeField] private GameObject liquid;
 
@@ -89,19 +84,6 @@ public class BucketScript : MonoBehaviour
         if (other.CompareTag(PIGMENT_DISPENSER_TAG))
         {
             is_pigment_dispenser_above_bucket = false;
-        }
-    }
-
-    public void summonBucket()
-    {
-        GameObject clone;
-
-        if (bucketSummoned == false)
-        {
-            clone = Instantiate(bucketPrefab, bucketTransform, Quaternion.identity);
-            //clone.transform.SetParent(interactParent.transform, true);
-            //Instantiate(bucketPrefab, bucketTransform, Quaternion.identity);
-            bucketSummoned = true;
         }
     }
 
