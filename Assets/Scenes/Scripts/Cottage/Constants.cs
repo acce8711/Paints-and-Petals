@@ -4,6 +4,14 @@ using UnityEngine;
 
 public static class Constants
 {
+    public enum FIELD
+    {
+        NONE,
+        FIELD_ONE,
+        FIELD_TWO,
+        FIELD_THREE
+    }
+
     public enum PIGMENT_COLOUR {
         NONE,
         RED_PIGMENT,

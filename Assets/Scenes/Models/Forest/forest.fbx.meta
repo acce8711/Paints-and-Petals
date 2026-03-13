@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5043e4db3a359be438d9b0ef824d0a64
+guid: 1ae720e0083e9f6499549a222619ccc4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,53 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: teleport_pad_pink
-    second: {fileID: 2100000, guid: 09789f85837fd924e84745c0d3796f39, type: 2}
+      name: forest_pink
+    second: {fileID: 2100000, guid: 6837d1ee132cd434e874260f97fec116, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: yellow_flower_mat
-    second: {fileID: 2100000, guid: d770197caf9134d44a075757eacf8387, type: 2}
+      name: green
+    second: {fileID: 2100000, guid: cad2abb1e9a4cf04a8c72840c170935e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green3_mat
+    second: {fileID: 2100000, guid: ec3f9d3ebefa6db4b868b3e5a27fb04b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green_2_mat
+    second: {fileID: 2100000, guid: a8eb58d5903111349872be13d88381db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey_rock
+    second: {fileID: 2100000, guid: b65ed639d49c9c54db220a6d2c27a52a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: interior_light_wood
+    second: {fileID: 2100000, guid: 5b792856510d35e45bb24976224974cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__path_mat
+    second: {fileID: 2100000, guid: bfc52c20f86b834488156c0bbd86fcc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__stem_green_mat
+    second: {fileID: 2100000, guid: 9076202b17628d84996a55426f17556c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red_forest_mat
+    second: {fileID: 2100000, guid: d17bad40b79d839409209276dbdff2da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunk_mat
+    second: {fileID: 2100000, guid: 214474799fd69a844ab84772515dd066, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
