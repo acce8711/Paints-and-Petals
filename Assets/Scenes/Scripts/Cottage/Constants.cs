@@ -36,4 +36,15 @@ public static class Constants
     public const float ADD_ANIMATION_LENGTH = 0.5f;
 
     public static Color CHALKBOARD_COLOUR = new Color(0.6913365f, 0.8207547f, 0.6465379f);
+
+    public static Vector3 ORDER_SWATCHES_LOCAL_POSITION = new Vector3(0f, -0.295f, 0f);
+
+    public static Vector3 PREVIOUS_ORDER_SWATCHES_LOCAL_POSITION = new Vector3(-0.824f, 0.427f, 0f);
+
+    public const float TRASH_DOOR_ANIMATION_ANGLE_X = 85f;
+
+    public const float DELIVERY_DOOR_ANIMATION_ANGLE_Y = 140f;
+
+    public const float DOOR_ANIMATION_DURATION = 0.5f;
+    public const float DOOR_ANIMATION_HOLD_DURATION = 0.8f;
 }

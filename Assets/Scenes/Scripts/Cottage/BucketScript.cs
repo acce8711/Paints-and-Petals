@@ -63,11 +63,6 @@ public class BucketScript : MonoBehaviour
         liquid_colour.material.color = colorMix;*/
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -136,6 +131,10 @@ public class BucketScript : MonoBehaviour
         }
     }
 
+    public Dictionary<PIGMENT_COLOUR, int> GetColourMix()
+    {
+        return added_pigments;
+    }
 
     //TO DELETE
 

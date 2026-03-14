@@ -5,16 +5,22 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BucketManager : MonoBehaviour
 {
+    public static BucketManager Instance;
+
     [SerializeField] private GameObject bucket_prefab;
     [SerializeField] private XRInteractionManager interaction_manager;
 
     //when a bucket is destroyed, this should be set to null
     private GameObject current_bucket;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
     }
 
     //creates a new bucket when the player clicks on the bucket stack
