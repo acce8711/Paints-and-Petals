@@ -39,7 +39,7 @@ public class OrderManager : MonoBehaviour
         DisplayPreviousOrder(colours[0]);
     }
 
-    //TO DO: handle new order creation, and paint checking
+    //TO DO: handle new order creation that randomized an order from the available colours that have not been complete yet
     //For paint checking you can compare the count and type of pigment in current_order.pigments_needed TO THE added_pigments in the BucketScript.cs. If their pigments and pigment counts match then the order is correct
 
     //method displays the passed in colour as a order on the chalkboard
