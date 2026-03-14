@@ -34,4 +34,6 @@ public static class Constants
     public const string PIGMENT_DISPENSER_TAG = "PigmentDispenser";
 
     public const float ADD_ANIMATION_LENGTH = 0.5f;
+
+    public static Color CHALKBOARD_COLOUR = new Color(0.6913365f, 0.8207547f, 0.6465379f);
 }

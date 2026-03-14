@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject); // Only one instance allowed
+            Destroy(gameObject);
             return;
         }
         Instance = this;
