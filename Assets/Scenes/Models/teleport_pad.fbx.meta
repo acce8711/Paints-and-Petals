@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b36e5055b1fab5945a30b4aef4ba23fe
+guid: 11e2cbe7c12e4b44ca8277fd5dfdb067
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: path_mat
-    second: {fileID: 2100000, guid: bfc52c20f86b834488156c0bbd86fcc8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: scf_fence3
-    second: {fileID: 2100000, guid: 5b792856510d35e45bb24976224974cc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: stem_green_mat
-    second: {fileID: 2100000, guid: 9076202b17628d84996a55426f17556c, type: 2}
+      name: teleport_pad1
+    second: {fileID: 2100000, guid: 09789f85837fd924e84745c0d3796f39, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
