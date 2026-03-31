@@ -894,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14075,6 +14075,18 @@ PrefabInstance:
     - target: {fileID: 6169281517336826138, guid: 2f49889d1b43b0f4f83879d982e2f04d, type: 3}
       propertyPath: m_Name
       value: House_prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013437644314431053, guid: 2f49889d1b43b0f4f83879d982e2f04d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6334cddf4cad18489ba96fa700f23fa, type: 2}
+    - target: {fileID: 7013437644314431053, guid: 2f49889d1b43b0f4f83879d982e2f04d, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6334cddf4cad18489ba96fa700f23fa, type: 2}
+    - target: {fileID: 9012293900013686367, guid: 2f49889d1b43b0f4f83879d982e2f04d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

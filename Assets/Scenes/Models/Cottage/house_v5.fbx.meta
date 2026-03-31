@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dc1218c957406ef48a664a22dcaf3d98
+guid: de5710ef897426840ba9fede1e488935
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -12,8 +12,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: art_mat
+    second: {fileID: 2100000, guid: f6334cddf4cad18489ba96fa700f23fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: blue
     second: {fileID: 2100000, guid: 5242406c13bc45544bd3532849f6fff0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brown_mat
+    second: {fileID: 2100000, guid: 214474799fd69a844ab84772515dd066, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -72,13 +82,43 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: pasted__labels
+    second: {fileID: 2100000, guid: a8594c7feef5b5a49997e1a0734cc9f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: purple_mat
+    second: {fileID: 2100000, guid: fbb3dd59bf6e0f74a8764efbcdf7c8e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red_flower_mat
+    second: {fileID: 2100000, guid: ce351c264fe3f96469cf5b63383cb068, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: red_mat
     second: {fileID: 2100000, guid: d17bad40b79d839409209276dbdff2da, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: stem_green_mat
+    second: {fileID: 2100000, guid: 9076202b17628d84996a55426f17556c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: transparent_mat
+    second: {fileID: 2100000, guid: 876a97afaf70df642a6bedc341cb8a7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: walls_mat
     second: {fileID: 2100000, guid: 962158590899ef240a9f4cd753ea4393, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white_mat
+    second: {fileID: 2100000, guid: 6b208fb56a84a56488be0b3d47e7ff21, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
