@@ -20,7 +20,7 @@ public class MusicPlayer : MonoBehaviour
         if (is_music_playing)
         {
             music_player.Play();
-            gameObject.transform.DORotate(new Vector3(0, 360, 0), 5f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Incremental);
+            gameObject.transform.DORotate(new Vector3(0, 360, 0), 5f, RotateMode.LocalAxisAdd).SetEase(Ease.Linear).SetLoops(-1, LoopType.Incremental);
         }
         else
         {
