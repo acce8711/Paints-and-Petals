@@ -11,6 +11,8 @@ public class OrderManager : MonoBehaviour
 
     public List<ColourInfo> colours;
 
+    public int colourCount;
+
     //current order chalkboard references
     public TextMeshProUGUI order_colour_name;
     public Transform order_container;
@@ -24,6 +26,9 @@ public class OrderManager : MonoBehaviour
     public Transform right_trash_door;
     public Transform left_delivery_door;
     public Transform right_delivery_door;
+    public GameObject correctFeedback;
+    public GameObject incorrectFeedback;
+    public Transform bucketStationTransform;
 
     //Prefabs
     public GameObject order_colour_swatches_prefab;
@@ -40,6 +45,8 @@ public class OrderManager : MonoBehaviour
     private GameObject current_order_chalkboard_swatches;
     private GameObject previous_order_chalkboard_swatches;
 
+    private int ordersCompleted;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -53,10 +60,9 @@ public class OrderManager : MonoBehaviour
     private void Start()
     {
         //this is just placeholder.Instead, it should randomize what colour is chosen for the order. It should call SelectNewOrder()
-        current_order = colours[0];
-        DisplayOrderOnChalkboard(current_order);
-        DisplayPreviousOrderOnChalkboard(colours[0]);
-        DisplayPreviousOrderOnChalkboard(colours[1]);
+        ordersCompleted = -1;
+        colourCount = colours.Count;
+        SelectNewOrder();
     }
 
     //method should be called from the bucketScript.cs and passed in the addeed_pigments dictionary as a paramater
@@ -89,9 +95,12 @@ public class OrderManager : MonoBehaviour
     public void RejectOrder()
     {
         //TO DO: display feedback on chalkboard above
+        incorrectFeedback.SetActive(true);
         AnimateTrashHinges();
+
         //TO DO: add animation of bucket going down
-        BucketManager.Instance.DestroyBucket();
+        bucketStationTransform.DOMove(new Vector3(1.9283f, 0.2f, -1.616f), 0.4f);
+
     }
 
     //TO DO: implement order acceptance flow
@@ -99,11 +108,11 @@ public class OrderManager : MonoBehaviour
     public void AcceptOrder()
     {
         //TO DO: display feedback on chalkboard above
-
+        correctFeedback.SetActive(true);
         AnimateDeliveryHinges();
 
         //TO DO: add animation of bucket going through delivery
-        BucketManager.Instance.DestroyBucket();
+        bucketStationTransform.DOMove(new Vector3(2.642f, 0.6927f, -1.616f), 1f);
 
         previous_order = current_order;
         current_order = SelectNewOrder();
@@ -115,7 +124,20 @@ public class OrderManager : MonoBehaviour
     //TO DO: handle new order creation that randomized an order from the available colours (ColourInfo) that have the completed varaible set to false (ColourInfo.completed)
     public ColourInfo SelectNewOrder()
     {
-        return null;
+        ordersCompleted++;
+        int randomNumber = Random.Range(0, colourCount);
+        if (colours[randomNumber].completed == true && ordersCompleted < colourCount)
+        {
+            while (colours[randomNumber].completed == true)
+            {
+                randomNumber = Random.Range(0, colourCount);
+            }
+        }
+        current_order = colours[randomNumber];
+        DisplayOrderOnChalkboard(current_order);
+        colours[randomNumber].completed = true;
+
+        return current_order;
     }
 
     //method animates the delivery hinges to open and then close after a delay
@@ -144,10 +166,24 @@ public class OrderManager : MonoBehaviour
         //close door
         right_delivery_door_animation_sequence.Append(right_delivery_door.DORotate(Vector3.zero, DOOR_ANIMATION_DURATION));
 
+        right_delivery_door_animation_sequence.OnComplete(() => {
+            clearBoard();
+        });
 
         //play animation
         left_delivery_door_animation_sequence.Play();
         right_delivery_door_animation_sequence.Play();
+
+        
+    }
+
+    // method clears board of correct/incorrect feedback
+    void clearBoard()
+    {
+        incorrectFeedback.SetActive(false);
+        correctFeedback.SetActive(false);
+        BucketManager.Instance.DestroyBucket();
+        bucketStationTransform.position = new Vector3(1.9283f, 0.6927f, -1.616f);
     }
 
 
@@ -177,6 +213,9 @@ public class OrderManager : MonoBehaviour
         //close door
         right_trash_door_animation_sequence.Append(right_trash_door.DORotate(Vector3.zero, DOOR_ANIMATION_DURATION));
 
+        right_trash_door_animation_sequence.OnComplete(() => {
+            clearBoard();
+        });
 
         //play animation
         left_trash_door_animation_sequence.Play();
