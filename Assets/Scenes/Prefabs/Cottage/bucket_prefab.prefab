@@ -26,7 +26,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0119, z: 0}
-  m_LocalScale: {x: 1.1158336, y: 1, z: 1.1158336}
+  m_LocalScale: {x: 1.1158336, y: 0, z: 1.1158336}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 925684300044430237}
@@ -549,9 +549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c524e30bc27365a4d81c7fe936d9928b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bucketPrefab: {fileID: 9105887330105523976}
-  bucketTransform: {x: 2.148, y: 1.0853, z: 1.8135}
-  bucketSummoned: 0
   liquid: {fileID: 829267816996096537}
   liquid_colour: {fileID: 6601951311905082960}
   pigment_count_UI_prefab: {fileID: 400255930554886392, guid: 4cb0a6ec7329f274cbfb930f12a1d45e, type: 3}

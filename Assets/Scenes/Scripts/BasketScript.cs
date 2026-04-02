@@ -6,17 +6,21 @@ using TMPro;
 public class BasketScript : MonoBehaviour
 {
 
-    public float redFlowers = 0;
-    public float yellowFlowers = 0;
-    public float blueFlowers = 0;
-    public float whiteFlowers = 0;
-    public float blackFlowers = 0;
+    public float redFlowers = 1;
+    public float yellowFlowers = 1;
+    public float blueFlowers = 1;
+    public float whiteFlowers = 1;
+    public float blackFlowers = 1;
 
     public TextMeshProUGUI redText;
     public TextMeshProUGUI yellowText;
     public TextMeshProUGUI blueText;
     public TextMeshProUGUI whiteText;
     public TextMeshProUGUI blackText;
+
+    public GameObject ImagePlane;
+
+    public GameObject redFlowerPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,35 @@ public class BasketScript : MonoBehaviour
         blueText.text = blueFlowers.ToString();
         whiteText.text = whiteFlowers.ToString();
         blackText.text = blackFlowers.ToString();
+
+        // WIP
+
+        /*if(ImagePlane.activeSelf == true)
+        {
+            Transform redFlower = ImagePlane.transform.Find("flower_red_prefab");
+
+            if (ImagePlane.transform.Find("flower_red_prefab") == null)
+            {
+                if(redFlowers != 0)
+                {
+                    redFlowers--;
+                    Instantiate(redFlowerPrefab, new Vector3(0.35f, -0.389f, 0f), Quaternion.Euler(0, 0, 0), ImagePlane.transform);
+                }
+            }
+        }*/
+
+    }
+
+    public void toggleImagePlane()
+    {
+        if(ImagePlane.activeSelf == true)
+        {
+            ImagePlane.SetActive(false);
+        }
+        else
+        {
+            ImagePlane.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
