@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.XR.Interaction.Toolkit;
+
+
 
 public class BasketScript : MonoBehaviour
 {
@@ -21,6 +24,10 @@ public class BasketScript : MonoBehaviour
     public GameObject ImagePlane;
 
     public GameObject redFlowerPrefab;
+
+    public AudioSource sound_source;
+    public AudioClip grab_sound;
+    public AudioClip flower_place_sound;
 
     // Start is called before the first frame update
     void Start()
@@ -75,31 +82,53 @@ public class BasketScript : MonoBehaviour
             redFlowers++;
 
             Destroy(other.transform.root.gameObject);
+
+            PlayFlowerPlaceSound();
         }
         else if (other.CompareTag("FlowerBlue"))
         {
             blueFlowers++;
 
             Destroy(other.transform.root.gameObject);
+
+            PlayFlowerPlaceSound();
         }
         else if (other.CompareTag("FlowerYellow"))
         {
             yellowFlowers++;
 
             Destroy(other.transform.root.gameObject);
+
+            PlayFlowerPlaceSound();
         }
         else if (other.CompareTag("FlowerWhite"))
         {
             whiteFlowers++;
 
             Destroy(other.transform.root.gameObject);
+
+            PlayFlowerPlaceSound();
         }
         else if (other.CompareTag("FlowerBlack"))
         {
             blackFlowers++;
 
             Destroy(other.transform.root.gameObject);
+
+            PlayFlowerPlaceSound();
         }
 
+    }
+
+    private void PlayFlowerPlaceSound()
+    {
+        sound_source.clip = flower_place_sound;
+        sound_source.Play();
+    }
+
+    public void OnBasketGrab(SelectEnterEventArgs args)
+    {
+        sound_source.clip = grab_sound;
+        sound_source.Play();
     }
 }

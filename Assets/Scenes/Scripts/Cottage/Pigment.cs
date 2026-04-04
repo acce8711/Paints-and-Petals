@@ -14,6 +14,9 @@ public class Pigment : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pigment_count_text;
     [SerializeField] private GameObject add_indicator;
     [SerializeField] private Transform player_pos;
+    [SerializeField] private AudioSource pigment_audio;
+    [SerializeField] private AudioClip sparkle_sound;
+    [SerializeField] private AudioClip paint_plop_sound;
 
     private int pigment_count;
 
@@ -44,6 +47,9 @@ public class Pigment : MonoBehaviour
             if (bucket_script.CanPigmentBeAdded())
             {
                 bucket_script.AddPigmentToBucket(pigment_type);
+                pigment_audio.clip = paint_plop_sound;
+                pigment_audio.Play();
+
                 DecreasePigmentCount();
             }
 
@@ -64,6 +70,8 @@ public class Pigment : MonoBehaviour
         pigment_count_text.text = pigment_count.ToString();
         UpdatePigmentCylinder();
         gameObject.GetComponent<HoverHighlight>().OnLastHoverExited(null);
+        pigment_audio.clip = sparkle_sound;
+        pigment_audio.Play();
         StartCoroutine(DisplayAddFeedback());
     }
 
