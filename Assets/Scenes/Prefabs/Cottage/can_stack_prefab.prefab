@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 3271698688101907629}
   - component: {fileID: 7353491625351540306}
   - component: {fileID: 5010194473160463643}
+  - component: {fileID: 1894386756959050167}
   m_Layer: 0
   m_Name: can_stack_prefab
   m_TagString: Untagged
@@ -127,10 +128,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1894386756959050167}
+        m_TargetAssemblyTypeName: HoverHighlight, Assembly-CSharp
+        m_MethodName: OnFirstHoverEntered
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1894386756959050167}
+        m_TargetAssemblyTypeName: HoverHighlight, Assembly-CSharp
+        m_MethodName: OnLastHoverExited
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -217,6 +242,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bucket_prefab: {fileID: 9105887330105523976, guid: 167a1c85136e48f4c92b9638268f6142, type: 3}
   interaction_manager: {fileID: 0}
+--- !u!114 &1894386756959050167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316201761577289265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad6274e3d1503f48920cb4bca39440b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  provided_object_outline: {fileID: 0}
 --- !u!1001 &1620623052753015012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -288,10 +326,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a1488b178623fd04a9b28ed58a970ce4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5678973953029088180}
   m_SourcePrefab: {fileID: 100100000, guid: a1488b178623fd04a9b28ed58a970ce4, type: 3}
 --- !u!4 &1294544550804223759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a1488b178623fd04a9b28ed58a970ce4, type: 3}
   m_PrefabInstance: {fileID: 1620623052753015012}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1926684969651547573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a1488b178623fd04a9b28ed58a970ce4, type: 3}
+  m_PrefabInstance: {fileID: 1620623052753015012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5678973953029088180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926684969651547573}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

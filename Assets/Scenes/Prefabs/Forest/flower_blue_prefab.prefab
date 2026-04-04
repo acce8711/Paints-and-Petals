@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 3378812854918672394}
   - component: {fileID: 5639880113580764655}
   - component: {fileID: 5203027939462448244}
+  - component: {fileID: 5146515537832585859}
   m_Layer: 0
   m_Name: flower_blue
   m_TagString: Untagged
@@ -136,6 +137,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5146515537832585859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207423256245740304}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &543537409103906804
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +199,7 @@ GameObject:
   - component: {fileID: 5896623024851177449}
   - component: {fileID: 853812576401457572}
   - component: {fileID: 4263756256904909228}
+  - component: {fileID: 5711004785186953374}
   m_Layer: 0
   m_Name: flower_blue_prefab
   m_TagString: FlowerBlue
@@ -271,10 +291,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5711004785186953374}
+        m_TargetAssemblyTypeName: HoverHighlight, Assembly-CSharp
+        m_MethodName: OnFirstHoverEntered
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5711004785186953374}
+        m_TargetAssemblyTypeName: HoverHighlight, Assembly-CSharp
+        m_MethodName: OnLastHoverExited
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -425,6 +469,19 @@ MonoBehaviour:
   rip_clip: {fileID: 8300000, guid: 370ffaf35156ce141b790b3488a220f4, type: 3}
   grab_clip: {fileID: 8300000, guid: 6d37d38b7de18cd44b29977a5e2d5f1f, type: 3}
   grabbed_from_ground: 0
+--- !u!114 &5711004785186953374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377149610486823848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad6274e3d1503f48920cb4bca39440b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  provided_object_outline: {fileID: 0}
 --- !u!1 &5417995590587575895
 GameObject:
   m_ObjectHideFlags: 0

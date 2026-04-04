@@ -69,7 +69,7 @@ public class Pigment : MonoBehaviour
         pigment_count++;
         pigment_count_text.text = pigment_count.ToString();
         UpdatePigmentCylinder();
-        gameObject.GetComponent<HoverHighlight>().OnLastHoverExited(null);
+        gameObject.GetComponent<HoverHighlight>().ManualHoverOff(gameObject.GetComponentInChildren<Outline>());
         pigment_audio.clip = sparkle_sound;
         pigment_audio.Play();
         StartCoroutine(DisplayAddFeedback());
@@ -104,7 +104,7 @@ public class Pigment : MonoBehaviour
     {
         if(other.CompareTag(accepted_flower_tag))
         {
-            gameObject.GetComponent<HoverHighlight>().OnFirstHoverEntered(null);
+            gameObject.GetComponent<HoverHighlight>().ManualHoverOn(gameObject.GetComponentInChildren<Outline>());
             other.transform.root.GetComponent<Flower>().CanBeConvertedToPigment(true, this);
         }
     }
@@ -114,7 +114,7 @@ public class Pigment : MonoBehaviour
     {
         if (other.CompareTag(accepted_flower_tag))
         {
-            gameObject.GetComponent<HoverHighlight>().OnLastHoverExited(null);
+            gameObject.GetComponent<HoverHighlight>().ManualHoverOff(gameObject.GetComponentInChildren<Outline>());
             other.transform.root.GetComponent<Flower>().CanBeConvertedToPigment(false, null);
         }
     }

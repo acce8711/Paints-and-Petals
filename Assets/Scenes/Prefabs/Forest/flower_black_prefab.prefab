@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1290718263860888350}
   - component: {fileID: 3036554237975829523}
   - component: {fileID: 2236477909487212802}
+  - component: {fileID: 3468003240903246743}
   m_Layer: 0
   m_Name: flower_black_prefab
   m_TagString: FlowerBlack
@@ -135,10 +136,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3468003240903246743}
+        m_TargetAssemblyTypeName: HoverHighlight, Assembly-CSharp
+        m_MethodName: OnFirstHoverEntered
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3468003240903246743}
+        m_TargetAssemblyTypeName: HoverHighlight, Assembly-CSharp
+        m_MethodName: OnLastHoverExited
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls:
@@ -289,6 +314,19 @@ MonoBehaviour:
   rip_clip: {fileID: 8300000, guid: 370ffaf35156ce141b790b3488a220f4, type: 3}
   grab_clip: {fileID: 8300000, guid: 6d37d38b7de18cd44b29977a5e2d5f1f, type: 3}
   grabbed_from_ground: 0
+--- !u!114 &3468003240903246743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4140487951239102789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad6274e3d1503f48920cb4bca39440b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  provided_object_outline: {fileID: 0}
 --- !u!1 &6110100050333024798
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +338,7 @@ GameObject:
   - component: {fileID: 5678926027757449068}
   - component: {fileID: 4687058239806328367}
   - component: {fileID: 7173631277584879665}
+  - component: {fileID: 820820705286671347}
   m_Layer: 0
   m_Name: flower_black
   m_TagString: Untagged
@@ -372,6 +411,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &820820705286671347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110100050333024798}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6623651314538508528
 GameObject:
   m_ObjectHideFlags: 0
