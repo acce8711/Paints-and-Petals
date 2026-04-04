@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class OrderManager : MonoBehaviour
     //current order chalkboard references
     public TextMeshProUGUI order_colour_name;
     public Transform order_container;
+    public AudioSource order_notification_audio;
    
     //previous order chalkboard references
     public TextMeshProUGUI previous_order_colour_name;
@@ -24,11 +26,23 @@ public class OrderManager : MonoBehaviour
     //trash and delivery door references
     public Transform left_trash_door;
     public Transform right_trash_door;
+    public AudioSource trash_audio_source;
+    public AudioSource trash_can_audio_source;
+
     public Transform left_delivery_door;
     public Transform right_delivery_door;
+    public AudioSource delivery_audio_source;
+
+    public AudioClip open_door_sound;
+    public AudioClip close_door_sound;
+
     public GameObject correctFeedback;
     public GameObject incorrectFeedback;
     public Transform bucketStationTransform;
+
+    public AudioSource board_feedback_audio;
+    public AudioClip correct_sound;
+    public AudioClip incorrect_sound;
 
     //Prefabs
     public GameObject order_colour_swatches_prefab;
@@ -87,7 +101,7 @@ public class OrderManager : MonoBehaviour
         }
 
         //if the above loop passes that means that there is an exact colour match and we can accept the order
-        AcceptOrder();
+        StartCoroutine(AcceptOrder());
     }
 
     //TO DO: implement order rejection flow
@@ -105,7 +119,7 @@ public class OrderManager : MonoBehaviour
 
     //TO DO: implement order acceptance flow
     //this method is called if the colour mix is correct
-    public void AcceptOrder()
+    public IEnumerator AcceptOrder()
     {
         //TO DO: display feedback on chalkboard above
         correctFeedback.SetActive(true);
@@ -113,6 +127,8 @@ public class OrderManager : MonoBehaviour
 
         //TO DO: add animation of bucket going through delivery
         bucketStationTransform.DOMove(new Vector3(2.642f, 0.6927f, -1.616f), 1f);
+
+        yield return new WaitForSeconds(4f);
 
         previous_order = current_order;
         current_order = SelectNewOrder();
@@ -134,6 +150,7 @@ public class OrderManager : MonoBehaviour
             }
         }
         current_order = colours[randomNumber];
+        order_notification_audio.Play();
         DisplayOrderOnChalkboard(current_order);
         colours[randomNumber].completed = true;
 
@@ -143,13 +160,18 @@ public class OrderManager : MonoBehaviour
     //method animates the delivery hinges to open and then close after a delay
     public void AnimateDeliveryHinges()
     {
+        delivery_audio_source.clip = open_door_sound;
+        delivery_audio_source.Play();
+
         //left door
         Sequence left_delivery_door_animation_sequence = DOTween.Sequence();
         //open door
         left_delivery_door_animation_sequence.Append(left_delivery_door.DORotate(new Vector3(0, DELIVERY_DOOR_ANIMATION_ANGLE_Y, 0), DOOR_ANIMATION_DURATION));
 
         //wait before closing door
-        left_delivery_door_animation_sequence.AppendInterval(DOOR_ANIMATION_HOLD_DURATION);
+        left_delivery_door_animation_sequence.AppendInterval(DOOR_ANIMATION_HOLD_DURATION)
+            .OnComplete(() => { delivery_audio_source.clip = close_door_sound;
+                                delivery_audio_source.Play();});
 
         //close door
         left_delivery_door_animation_sequence.Append(left_delivery_door.DORotate(Vector3.zero, DOOR_ANIMATION_DURATION));
@@ -167,6 +189,8 @@ public class OrderManager : MonoBehaviour
         right_delivery_door_animation_sequence.Append(right_delivery_door.DORotate(Vector3.zero, DOOR_ANIMATION_DURATION));
 
         right_delivery_door_animation_sequence.OnComplete(() => {
+            board_feedback_audio.clip = correct_sound;
+            board_feedback_audio.Play();
             clearBoard();
         });
 
@@ -180,23 +204,39 @@ public class OrderManager : MonoBehaviour
     // method clears board of correct/incorrect feedback
     void clearBoard()
     {
-        incorrectFeedback.SetActive(false);
-        correctFeedback.SetActive(false);
+        StartCoroutine(ClearFeedbackBoardAfterDelay());
         BucketManager.Instance.DestroyBucket();
         bucketStationTransform.position = new Vector3(1.9283f, 0.6927f, -1.616f);
+    }
+
+    IEnumerator ClearFeedbackBoardAfterDelay()
+    {
+        yield return new WaitForSeconds(5f);
+        incorrectFeedback.SetActive(false);
+        correctFeedback.SetActive(false);
     }
 
 
     //method animates the trash hinges to open and then close after a delay
     public void AnimateTrashHinges()
     {
+        trash_audio_source.clip = open_door_sound;
+        trash_audio_source.Play();
+
         //left door
         Sequence left_trash_door_animation_sequence = DOTween.Sequence();
         //open door
-        left_trash_door_animation_sequence.Append(left_trash_door.DORotate(new Vector3(TRASH_DOOR_ANIMATION_ANGLE_X * (-1), 0, 0), DOOR_ANIMATION_DURATION));
+        left_trash_door_animation_sequence.Append(left_trash_door.DORotate(new Vector3(TRASH_DOOR_ANIMATION_ANGLE_X * (-1), 0, 0), DOOR_ANIMATION_DURATION)
+            .OnComplete(() => trash_can_audio_source.Play()));
 
         //wait before closing door
         left_trash_door_animation_sequence.AppendInterval(DOOR_ANIMATION_HOLD_DURATION);
+
+        left_trash_door_animation_sequence.AppendCallback(() => 
+            {
+                trash_audio_source.clip = close_door_sound;
+                trash_audio_source.Play();
+            });
 
         //close door
         left_trash_door_animation_sequence.Append(left_trash_door.DORotate(Vector3.zero, DOOR_ANIMATION_DURATION));
@@ -214,6 +254,8 @@ public class OrderManager : MonoBehaviour
         right_trash_door_animation_sequence.Append(right_trash_door.DORotate(Vector3.zero, DOOR_ANIMATION_DURATION));
 
         right_trash_door_animation_sequence.OnComplete(() => {
+            board_feedback_audio.clip = incorrect_sound;
+            board_feedback_audio.Play();
             clearBoard();
         });
 

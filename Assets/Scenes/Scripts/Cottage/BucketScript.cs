@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using static Constants;
 using Scrtwpns.Mixbox;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class BucketScript : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class BucketScript : MonoBehaviour
     
 
     private bool is_pigment_dispenser_above_bucket;
-    private bool has_binder_and_solvent;
+    public bool has_binder_and_solvent;
 
     //dictionary contains a count of each pigment type in the bucket
     private Dictionary<PIGMENT_COLOUR, int> added_pigments;
@@ -49,7 +50,7 @@ public class BucketScript : MonoBehaviour
         added_pigments_UI.Add(PIGMENT_COLOUR.WHITE_PIGMENT, null);
 
         //TEMP TO REMOVE
-        has_binder_and_solvent = true;
+        has_binder_and_solvent = false;
 
         /*MixboxLatent z1 = Mixbox.RGBToLatent(PIGMENT_COLOURS[PIGMENT_COLOUR.WHITE_PIGMENT]);
         MixboxLatent z2 = Mixbox.RGBToLatent(PIGMENT_COLOURS[PIGMENT_COLOUR.BLUE_PIGMENT]);
@@ -136,27 +137,15 @@ public class BucketScript : MonoBehaviour
         return added_pigments;
     }
 
-    //TO DELETE
-
-    //CMYK
-/*    private void UpdateLiquidColour(Color added_pigment)
+    public void DisableBucketInteraction()
     {
-        Color current_colour = liquid_colour.material.color;
-
-
-        Color cmy1 = new Color(1f - added_pigment.r, 1f - added_pigment.g, 1f - added_pigment.b);
-        Color cmy2 = new Color(1f - current_colour.r, 1f - current_colour.g, 1f - current_colour.b);
-
-        Color resultCmy = new Color(Mathf.Min(cmy1.r + cmy2.r, 1f),
-                                    Mathf.Min(cmy1.g + cmy2.g, 1f),
-                                    Mathf.Min(cmy1.b + cmy2.b, 1f));
-
-        liquid_colour.material.color = new Color(1f - resultCmy.r, 1f - resultCmy.g, 1f - resultCmy.b);
+        gameObject.GetComponent<XRGrabInteractable>().enabled = false;
     }
 
-    private void LightenColour()
+    public void EnableBucketInteraction()
     {
-        Color current_colour = liquid_colour.material.color;
-        liquid_colour.material.color = Color.Lerp(current_colour, Color.white, 0.5f);
-    }*/
+        gameObject.GetComponent<XRGrabInteractable>().enabled = true;
+    }
+
+
 }

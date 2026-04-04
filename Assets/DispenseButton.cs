@@ -31,9 +31,14 @@ public class DispenseButton : MonoBehaviour
 
         if (BucketManager.Instance.GetCurrentBucket().transform.position == socketPos)
         {
+            //disable grab on bucket
+            GameObject bucket = BucketManager.Instance.GetCurrentBucket();
+            bucket.GetComponent<BucketScript>().DisableBucketInteraction();
+            bucket.GetComponent<BucketScript>().has_binder_and_solvent = true;
             Sequence bucketFill = DOTween.Sequence();
-            bucketFill.Append(BucketManager.Instance.GetCurrentBucket().transform.GetChild(2).gameObject.transform.DOScaleY(0f, 1.5f));
-            bucketFill.Append(BucketManager.Instance.GetCurrentBucket().transform.GetChild(2).gameObject.transform.DOScaleY(1f, 3.5f));
+            bucketFill.Append(bucket.transform.GetChild(2).gameObject.transform.DOScaleY(0f, 1.5f));
+            bucketFill.Append(bucket.transform.GetChild(2).gameObject.transform.DOScaleY(1f, 3.5f));
+            bucketFill.AppendCallback(() => bucket.GetComponent<BucketScript>().EnableBucketInteraction());
             bucketFill.Play();
             dispenserParticles.GetComponent<ParticleSystem>().Play();
             dispenserParticles.GetComponent<AudioSource>().Play();
