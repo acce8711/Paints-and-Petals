@@ -1531,6 +1531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pigment_dispenser_prefab - blue
       objectReference: {fileID: 0}
+    - target: {fileID: 1439564404764927538, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: highlighted_shader
+      value: 
+      objectReference: {fileID: 4800000, guid: 0316fde2f64abcf42aa1d8d2331534d2, type: 3}
     - target: {fileID: 4227189711897938743, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: player_pos
       value: 

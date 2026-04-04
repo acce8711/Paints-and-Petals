@@ -11,13 +11,14 @@ public class HoverHighlight : MonoBehaviour
 
     public void OnFirstHoverEntered(HoverEnterEventArgs args)
     {
-        if (args != null)
+        if (args != null && (args.interactorObject is XRRayInteractor || args.interactorObject is XRDirectInteractor))
         {
-            Renderer renderer = args.interactableObject.transform.GetComponentInChildren<Renderer>();
-            foreach (Material material in renderer.materials)
+            Outline renderer = args.interactableObject.transform.GetComponentInChildren<Outline>();
+            renderer.enabled = true;
+            /*foreach (Material material in renderer.materials)
             {
                 material.shader = highlighted_shader;
-            }
+            }*/
         } else if (mesh_renderer != null)
         {
             foreach (Material material in mesh_renderer.materials)
@@ -29,7 +30,7 @@ public class HoverHighlight : MonoBehaviour
 
     public void OnLastHoverExited(HoverExitEventArgs args)
     {
-        if (args != null && !args.interactableObject.isHovered)
+        if (args != null && (!args.interactableObject.isHovered || (args.interactableObject.interactorsHovering.Count == 1 && args.interactableObject.interactorsHovering[0] is XRSocketInteractor)))
         {
             Renderer renderer = args.interactableObject.transform.GetComponentInChildren<Renderer>();
             foreach (Material material in renderer.materials)
