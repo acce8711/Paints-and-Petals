@@ -294,6 +294,7 @@ MonoBehaviour:
   pigment_audio: {fileID: 6465582987161056801}
   sparkle_sound: {fileID: 8300000, guid: ac49f5d2740c1f7498e304f64e5cb51b, type: 3}
   paint_plop_sound: {fileID: 8300000, guid: 4438d72339920094f87f39b20a43b7bc, type: 3}
+  pigment_renderer: {fileID: 0}
 --- !u!65 &1817322011355158996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -313,8 +314,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.04, z: 0.1}
-  m_Center: {x: 0, y: -0.11, z: 0}
+  m_Size: {x: 0.1, y: 0.12, z: 0.1}
+  m_Center: {x: 0, y: -0.1, z: 0}
 --- !u!135 &8418401335331183930
 SphereCollider:
   m_ObjectHideFlags: 0
