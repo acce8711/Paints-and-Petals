@@ -132,9 +132,14 @@ public class OrderManager : MonoBehaviour
 
         previous_order = current_order;
         current_order = SelectNewOrder();
-
+        if(previous_order != null)
+        {
+            DisplayPreviousOrderOnChalkboard(previous_order);
+            DisplayPosterColourSwatch(previous_order.poster_colour_swatch);
+        }
+           
         DisplayOrderOnChalkboard(current_order);
-        DisplayPreviousOrderOnChalkboard(previous_order);
+        
     }
 
     //TO DO: handle new order creation that randomized an order from the available colours (ColourInfo) that have the completed varaible set to false (ColourInfo.completed)
@@ -216,6 +221,11 @@ public class OrderManager : MonoBehaviour
         correctFeedback.SetActive(false);
     }
 
+
+    public void DisplayPosterColourSwatch(GameObject colour_swatch)
+    {
+        colour_swatch.SetActive(true);
+    }
 
     //method animates the trash hinges to open and then close after a delay
     public void AnimateTrashHinges()

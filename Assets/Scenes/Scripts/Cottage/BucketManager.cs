@@ -28,7 +28,10 @@ public class BucketManager : MonoBehaviour
     {
         //only create a new bucket if another one doesn't already exist
         if (current_bucket != null)
+        {
             return;
+        }
+            
 
         current_bucket = Instantiate(bucket_prefab);
         interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, current_bucket.GetComponent<XRGrabInteractable>());

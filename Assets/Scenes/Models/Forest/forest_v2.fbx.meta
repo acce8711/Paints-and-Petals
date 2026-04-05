@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de5710ef897426840ba9fede1e488935
+guid: 5ec64d6555de13a4b89ded3f7d789903
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,97 +7,47 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_BrownReds
-    second: {fileID: 2100000, guid: d17bad40b79d839409209276dbdff2da, type: 2}
+      name: bright_green
+    second: {fileID: 2100000, guid: cad2abb1e9a4cf04a8c72840c170935e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: art_mat
-    second: {fileID: 2100000, guid: f6334cddf4cad18489ba96fa700f23fa, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: blue
-    second: {fileID: 2100000, guid: 5242406c13bc45544bd3532849f6fff0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: brown_mat
-    second: {fileID: 2100000, guid: 214474799fd69a844ab84772515dd066, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: can_labels
-    second: {fileID: 2100000, guid: 75c660ed6d224ed49b0499eff8676327, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: chalkboard_mat
-    second: {fileID: 2100000, guid: aaa7b5c3ef8ff3e4fa4adb37a7395568, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: dark_gray
+      name: dark_gray_mat
     second: {fileID: 2100000, guid: b65ed639d49c9c54db220a6d2c27a52a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: dark_interior_wood
-    second: {fileID: 2100000, guid: 43783c0a90b81f44e99385187a8f30f8, type: 2}
+      name: dark_green_mat
+    second: {fileID: 2100000, guid: ec3f9d3ebefa6db4b868b3e5a27fb04b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: exterior_dark2
-    second: {fileID: 2100000, guid: 29c61b204dd969040bbb82de11090f2f, type: 2}
+      name: forest_light_green_mat
+    second: {fileID: 2100000, guid: cad2abb1e9a4cf04a8c72840c170935e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: exterior_light1
-    second: {fileID: 2100000, guid: 0f3bfaed0b48f054b9bc4b374638a576, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: floor_mat
-    second: {fileID: 2100000, guid: 32dcf44587e36ae42975319a803a092e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: interior_light_wood
+      name: light_wood_mat
     second: {fileID: 2100000, guid: 5b792856510d35e45bb24976224974cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: light_gray
-    second: {fileID: 2100000, guid: 3712ad27d0c17764fa81c13668036420, type: 2}
+      name: medium_green_mat
+    second: {fileID: 2100000, guid: a8eb58d5903111349872be13d88381db, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: mustard_yellow
-    second: {fileID: 2100000, guid: 4f26636240f7dc143b9efa3fff34771f, type: 2}
+      name: path_mat
+    second: {fileID: 2100000, guid: bfc52c20f86b834488156c0bbd86fcc8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: olive_green
-    second: {fileID: 2100000, guid: 566ff41592f3019499106024e0bbbcf7, type: 2}
+      name: pink_mat
+    second: {fileID: 2100000, guid: 6837d1ee132cd434e874260f97fec116, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: pasted__labels
-    second: {fileID: 2100000, guid: a8594c7feef5b5a49997e1a0734cc9f3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: purple_mat
-    second: {fileID: 2100000, guid: fbb3dd59bf6e0f74a8764efbcdf7c8e5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: red_flower_mat
-    second: {fileID: 2100000, guid: ce351c264fe3f96469cf5b63383cb068, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: red_mat
+      name: red_forest_mat
     second: {fileID: 2100000, guid: d17bad40b79d839409209276dbdff2da, type: 2}
   - first:
       type: UnityEngine:Material
@@ -107,18 +57,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: transparent_mat
-    second: {fileID: 2100000, guid: 876a97afaf70df642a6bedc341cb8a7f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: walls_mat
-    second: {fileID: 2100000, guid: 962158590899ef240a9f4cd753ea4393, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: white_mat
-    second: {fileID: 2100000, guid: 6b208fb56a84a56488be0b3d47e7ff21, type: 2}
+      name: trunk_mat
+    second: {fileID: 2100000, guid: 214474799fd69a844ab84772515dd066, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

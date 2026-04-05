@@ -52,16 +52,6 @@ public class BucketScript : MonoBehaviour
         //TEMP TO REMOVE
         has_binder_and_solvent = false;
 
-        /*MixboxLatent z1 = Mixbox.RGBToLatent(PIGMENT_COLOURS[PIGMENT_COLOUR.WHITE_PIGMENT]);
-        MixboxLatent z2 = Mixbox.RGBToLatent(PIGMENT_COLOURS[PIGMENT_COLOUR.BLUE_PIGMENT]);
-        MixboxLatent z3 = Mixbox.RGBToLatent(PIGMENT_COLOURS[PIGMENT_COLOUR.YELLOW_PIGMENT]);
-        
-              MixboxLatent zMix = (0.25f*z1 + // 30% of color1
-                                   0.5f*z2 + // 60% of color2
-                                   0.25f*z3); // 10% of color3
-       
-        Color colorMix = Mixbox.LatentToRGB(zMix);
-        liquid_colour.material.color = colorMix;*/
     }
 
 
@@ -71,6 +61,12 @@ public class BucketScript : MonoBehaviour
         if (other.CompareTag(PIGMENT_DISPENSER_TAG))
         {
             is_pigment_dispenser_above_bucket = true;
+
+            HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
+            if (hover_highlight != null)
+            {
+                gameObject.GetComponent<HoverHighlight>().ManualHoverOn();
+            }
         }
     }
 
@@ -80,6 +76,12 @@ public class BucketScript : MonoBehaviour
         if (other.CompareTag(PIGMENT_DISPENSER_TAG))
         {
             is_pigment_dispenser_above_bucket = false;
+
+            HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
+            if (hover_highlight != null)
+            {
+                gameObject.GetComponent<HoverHighlight>().ManualHoverOff();
+            }
         }
     }
 

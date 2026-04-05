@@ -8,6 +8,8 @@ public class DispenseButton : MonoBehaviour
     Vector3 socketPos = new Vector3(1.922f, 0.6927f, 0.973f);
 
     public GameObject dispenserParticles;
+    public AudioSource audio_player;
+    public AudioClip pour_sound;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +43,9 @@ public class DispenseButton : MonoBehaviour
             bucketFill.AppendCallback(() => bucket.GetComponent<BucketScript>().EnableBucketInteraction());
             bucketFill.Play();
             dispenserParticles.GetComponent<ParticleSystem>().Play();
-            dispenserParticles.GetComponent<AudioSource>().Play();
+            audio_player.clip = pour_sound;
+            audio_player.Play();
 
-        }
+        } 
     }
 }

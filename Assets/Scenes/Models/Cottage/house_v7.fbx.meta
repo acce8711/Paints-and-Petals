@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af13f6822adde2546a041495963f35e8
+guid: b59a43916517a7447814af4345b31683
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,27 +7,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_BrownReds
-    second: {fileID: 2100000, guid: d17bad40b79d839409209276dbdff2da, type: 2}
+      name: arts_mat
+    second: {fileID: 2100000, guid: f6334cddf4cad18489ba96fa700f23fa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: art
-    second: {fileID: 2100000, guid: 75c660ed6d224ed49b0499eff8676327, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: blue
+      name: blue_mat1
     second: {fileID: 2100000, guid: 5242406c13bc45544bd3532849f6fff0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: brown_mat
-    second: {fileID: 2100000, guid: 214474799fd69a844ab84772515dd066, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: can_labels
+      name: can_labels_mat
     second: {fileID: 2100000, guid: 75c660ed6d224ed49b0499eff8676327, type: 2}
   - first:
       type: UnityEngine:Material
@@ -37,23 +27,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: dark_gray
-    second: {fileID: 2100000, guid: b65ed639d49c9c54db220a6d2c27a52a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: dark_interior_wood
-    second: {fileID: 2100000, guid: 43783c0a90b81f44e99385187a8f30f8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: exterior_dark2
+      name: dark_exterior_mat
     second: {fileID: 2100000, guid: 29c61b204dd969040bbb82de11090f2f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: exterior_light1
-    second: {fileID: 2100000, guid: 0f3bfaed0b48f054b9bc4b374638a576, type: 2}
+      name: dark_gray_mat
+    second: {fileID: 2100000, guid: b65ed639d49c9c54db220a6d2c27a52a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_green_mat
+    second: {fileID: 2100000, guid: fbb3dd59bf6e0f74a8764efbcdf7c8e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_wood_material
+    second: {fileID: 2100000, guid: 43783c0a90b81f44e99385187a8f30f8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -62,18 +52,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: interior_light_wood
-    second: {fileID: 2100000, guid: 5b792856510d35e45bb24976224974cc, type: 2}
+      name: flower_stem_mat
+    second: {fileID: 2100000, guid: 9076202b17628d84996a55426f17556c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: labels
-    second: {fileID: 2100000, guid: 75c660ed6d224ed49b0499eff8676327, type: 2}
+      name: glass_material
+    second: {fileID: 2100000, guid: 876a97afaf70df642a6bedc341cb8a7f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: light_gray
+      name: light_exterior_mat
+    second: {fileID: 2100000, guid: 0f3bfaed0b48f054b9bc4b374638a576, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_gray_mat
     second: {fileID: 2100000, guid: 3712ad27d0c17764fa81c13668036420, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_wood_mat
+    second: {fileID: 2100000, guid: 5b792856510d35e45bb24976224974cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -82,18 +82,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: olive_green
+      name: olive_green_mat
     second: {fileID: 2100000, guid: 566ff41592f3019499106024e0bbbcf7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: purple_mat
-    second: {fileID: 2100000, guid: fbb3dd59bf6e0f74a8764efbcdf7c8e5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: red_flower_mat
-    second: {fileID: 2100000, guid: ce351c264fe3f96469cf5b63383cb068, type: 2}
+      name: posters_mat
+    second: {fileID: 2100000, guid: a8594c7feef5b5a49997e1a0734cc9f3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -102,13 +97,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: stem_green_mat
-    second: {fileID: 2100000, guid: 9076202b17628d84996a55426f17556c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: transparent_mat
-    second: {fileID: 2100000, guid: 876a97afaf70df642a6bedc341cb8a7f, type: 2}
+      name: trunk_mat
+    second: {fileID: 2100000, guid: 214474799fd69a844ab84772515dd066, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
