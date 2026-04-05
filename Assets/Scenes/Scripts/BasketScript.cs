@@ -23,11 +23,28 @@ public class BasketScript : MonoBehaviour
 
     public GameObject ImagePlane;
 
+    public GameObject redFlowerPreview;
     public GameObject redFlowerPrefab;
+
+    public GameObject blueFlowerPreview;
+    public GameObject blueFlowerPrefab;
+
+    public GameObject yellowFlowerPreview;
+    public GameObject yellowFlowerPrefab;
+
+    public GameObject whiteFlowerPreview;
+    public GameObject whiteFlowerPrefab;
+
+    public GameObject blackFlowerPreview;
+    public GameObject blackFlowerPrefab;
 
     public AudioSource sound_source;
     public AudioClip grab_sound;
     public AudioClip flower_place_sound;
+
+    private GameObject newFlower;
+
+    [SerializeField] private XRInteractionManager interaction_manager;
 
     // Start is called before the first frame update
     void Start()
@@ -44,21 +61,59 @@ public class BasketScript : MonoBehaviour
         whiteText.text = whiteFlowers.ToString();
         blackText.text = blackFlowers.ToString();
 
-        // WIP
+    }
 
-        /*if(ImagePlane.activeSelf == true)
+    public void grabRedFlower(ActivateEventArgs args)
+    {
+        newFlower = Instantiate(redFlowerPrefab);
+        interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
+        redFlowers--;
+        if(redFlowers == 0)
         {
-            Transform redFlower = ImagePlane.transform.Find("flower_red_prefab");
+            redFlowerPreview.SetActive(false);
+        }
+    }
+    public void grabBlueFlower(ActivateEventArgs args)
+    {
+        newFlower = Instantiate(blueFlowerPrefab);
+        interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
+        blueFlowers--;
+        if (blueFlowers == 0)
+        {
+            blueFlowerPreview.SetActive(false);
+        }
 
-            if (ImagePlane.transform.Find("flower_red_prefab") == null)
-            {
-                if(redFlowers != 0)
-                {
-                    redFlowers--;
-                    Instantiate(redFlowerPrefab, new Vector3(0.35f, -0.389f, 0f), Quaternion.Euler(0, 0, 0), ImagePlane.transform);
-                }
-            }
-        }*/
+    }
+    public void grabYellowFlower(ActivateEventArgs args)
+    {
+        newFlower = Instantiate(yellowFlowerPrefab);
+        interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
+        yellowFlowers--;
+        if (yellowFlowers == 0)
+        {
+            yellowFlowerPreview.SetActive(false);
+        }
+    }
+    public void grabWhiteFlower(ActivateEventArgs args)
+    {
+        newFlower = Instantiate(whiteFlowerPrefab);
+        interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
+        whiteFlowers--;
+        if (whiteFlowers == 0)
+        {
+            whiteFlowerPreview.SetActive(false);
+        }
+
+    }
+    public void grabBlackFlower(ActivateEventArgs args)
+    {
+        newFlower = Instantiate(blackFlowerPrefab);
+        interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
+        blackFlowers--;
+        if (blackFlowers == 0)
+        {
+            blackFlowerPreview.SetActive(false);
+        }
 
     }
 
@@ -71,6 +126,35 @@ public class BasketScript : MonoBehaviour
         else
         {
             ImagePlane.SetActive(true);
+
+            if (redFlowers > 0)
+            {
+                redFlowerPreview.SetActive(true);
+            }
+
+            if (blueFlowers > 0)
+            {
+                blueFlowerPreview.SetActive(true);
+            }
+
+
+            if (yellowFlowers > 0)
+            {
+                yellowFlowerPreview.SetActive(true);
+            }
+
+
+            if (whiteFlowers > 0)
+            {
+                whiteFlowerPreview.SetActive(true);
+            }
+
+
+            if (blackFlowers > 0)
+            {
+                blackFlowerPreview.SetActive(true);
+            }
+
         }
     }
 

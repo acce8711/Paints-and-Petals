@@ -12,6 +12,8 @@ public class DistanceCheck : MonoBehaviour
     [SerializeField] Vector3 flower_field_position;
     [SerializeField] Constants.FIELD field_type;
 
+    public GameObject prefabRef;
+
     private float timer;
 
     void Update()
@@ -32,6 +34,9 @@ public class DistanceCheck : MonoBehaviour
 
             } else if (GameManager.Instance.active_field == field_type)
             {
+                flower_field.SetActive(false);
+                Destroy(flower_field);
+                flower_field = Instantiate(prefabRef, flower_field_position, Quaternion.identity);
                 flower_field.SetActive(false);
                 GameManager.Instance.active_field = Constants.FIELD.NONE;
             }
