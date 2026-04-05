@@ -17,6 +17,7 @@ public class Pigment : MonoBehaviour
     [SerializeField] private AudioSource pigment_audio;
     [SerializeField] private AudioClip sparkle_sound;
     [SerializeField] private AudioClip paint_plop_sound;
+    [SerializeField] private AudioClip error_sound;
 
     private int pigment_count;
 
@@ -51,6 +52,10 @@ public class Pigment : MonoBehaviour
                 pigment_audio.Play();
 
                 DecreasePigmentCount();
+            } else
+            {
+                pigment_audio.clip = error_sound;
+                pigment_audio.Play();
             }
 
         }

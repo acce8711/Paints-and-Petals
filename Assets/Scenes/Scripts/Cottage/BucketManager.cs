@@ -9,6 +9,7 @@ public class BucketManager : MonoBehaviour
 
     [SerializeField] private GameObject bucket_prefab;
     [SerializeField] private XRInteractionManager interaction_manager;
+    [SerializeField] private AudioSource wrong_audio;
 
     //when a bucket is destroyed, this should be set to null
     private GameObject current_bucket;
@@ -28,7 +29,11 @@ public class BucketManager : MonoBehaviour
     {
         //only create a new bucket if another one doesn't already exist
         if (current_bucket != null)
+        {
+            wrong_audio.Play();
             return;
+        }
+            
 
         current_bucket = Instantiate(bucket_prefab);
         interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, current_bucket.GetComponent<XRGrabInteractable>());

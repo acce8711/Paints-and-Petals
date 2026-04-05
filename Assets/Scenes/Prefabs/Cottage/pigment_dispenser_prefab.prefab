@@ -294,6 +294,7 @@ MonoBehaviour:
   pigment_audio: {fileID: 6465582987161056801}
   sparkle_sound: {fileID: 8300000, guid: ac49f5d2740c1f7498e304f64e5cb51b, type: 3}
   paint_plop_sound: {fileID: 8300000, guid: 4438d72339920094f87f39b20a43b7bc, type: 3}
+  error_sound: {fileID: 8300000, guid: 70a94693b6d8254438d8f7aa6a0f1ab5, type: 3}
 --- !u!65 &1817322011355158996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -348,8 +349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad6274e3d1503f48920cb4bca39440b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  default_shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  highlighted_shader: {fileID: 4800000, guid: 7723e3ac21872364a9c605c257a5a48d, type: 3}
   mesh_renderer: {fileID: 0}
 --- !u!82 &494325464925490280
 AudioSource:
