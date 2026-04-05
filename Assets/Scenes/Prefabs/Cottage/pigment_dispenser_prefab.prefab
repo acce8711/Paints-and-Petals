@@ -348,7 +348,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad6274e3d1503f48920cb4bca39440b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  provided_object_outline: {fileID: 0}
+  default_shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  highlighted_shader: {fileID: 4800000, guid: 7723e3ac21872364a9c605c257a5a48d, type: 3}
+  mesh_renderer: {fileID: 0}
 --- !u!82 &494325464925490280
 AudioSource:
   m_ObjectHideFlags: 0
@@ -552,7 +554,6 @@ GameObject:
   - component: {fileID: 6029870087195441175}
   - component: {fileID: 2225945356134655126}
   - component: {fileID: 1139798793859062674}
-  - component: {fileID: 957154881054518353}
   m_Layer: 0
   m_Name: dispenser_yellow
   m_TagString: Untagged
@@ -625,24 +626,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &957154881054518353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978328870047497310}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 8
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &1294114853934958079
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +771,6 @@ GameObject:
   - component: {fileID: 4216571929177936243}
   - component: {fileID: 1232377082095359837}
   - component: {fileID: 7447369278589317667}
-  - component: {fileID: 7987877081117553660}
   m_Layer: 0
   m_Name: dispenser_white
   m_TagString: Untagged
@@ -861,24 +843,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7987877081117553660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299419982831340747}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 8
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &2057609626570001413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1102,6 @@ GameObject:
   - component: {fileID: 4215316653142592353}
   - component: {fileID: 533449391905715088}
   - component: {fileID: 5711823267907233782}
-  - component: {fileID: 4651797925946945141}
   m_Layer: 0
   m_Name: dispenser_red
   m_TagString: Untagged
@@ -1211,24 +1174,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4651797925946945141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5493159980951239670}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 8
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &5945813439628998541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1240,6 @@ GameObject:
   - component: {fileID: 4460848941210154431}
   - component: {fileID: 5362553318743935554}
   - component: {fileID: 8141565048096622710}
-  - component: {fileID: 7405825985268213499}
   m_Layer: 0
   m_Name: dispenser_blue
   m_TagString: Untagged
@@ -1368,24 +1312,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7405825985268213499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6691478451264721260}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 8
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &6926299198817144827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1462,6 @@ GameObject:
   - component: {fileID: 4003434429321442126}
   - component: {fileID: 1367278351607005189}
   - component: {fileID: 7894405987821344481}
-  - component: {fileID: 2064209806532761733}
   m_Layer: 0
   m_Name: dispenser_black
   m_TagString: Untagged
@@ -1609,24 +1534,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2064209806532761733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8225854409220383237}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 8
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &8731276670852118754
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,48 +6,48 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HoverHighlight : MonoBehaviour
 {
+    [SerializeField] private Renderer mesh_renderer;
+
     public void OnFirstHoverEntered(HoverEnterEventArgs args)
     {
         if (args != null && (args.interactorObject is XRRayInteractor || args.interactorObject is XRDirectInteractor))
         {
-            Outline outline = args.interactableObject.transform.GetComponentInChildren<Outline>();
-            outline.enabled = true;
-        } 
+            Renderer renderer = args.interactableObject.transform.GetComponentInChildren<Renderer>();
+            //renderer.enabled = true;
+            foreach (Material material in renderer.materials)
+            {
+                material.EnableKeyword("_EMISSION");
+            }
+        }
     }
 
     public void OnLastHoverExited(HoverExitEventArgs args)
     {
         if (args != null && (!args.interactableObject.isHovered || (args.interactableObject.interactorsHovering.Count == 1 && args.interactableObject.interactorsHovering[0] is XRSocketInteractor)))
         {
-            Outline outline = args.interactableObject.transform.GetComponentInChildren<Outline>();
-            outline.enabled = false;
-        } 
-    }
-
-    public void ManualHoverOn(Outline provided_object_outline)
-    {
-        provided_object_outline.enabled = true;
-    }
-
-    public void ManualHoverOff(Outline provided_object_outline)
-    {
-        provided_object_outline.enabled = false;
-    }
-
-    /*    public void OnSelectEntered()
-        {
-            if (mesh_renderer != null)
+            Renderer renderer = args.interactableObject.transform.GetComponentInChildren<Renderer>();
+            foreach (Material material in renderer.materials)
             {
-                mesh_renderer.material = highlighted_shader;
+                material.DisableKeyword("_EMISSION");
+
             }
         }
+    }
 
-        public void OnSelectExited(SelectExitEventArgs args)
+    public void ManualHoverOn()
+    {
+        foreach (Material material in transform.GetComponentInChildren<Renderer>().materials)
         {
-            if (mesh_renderer != null && !args.interactableObject.isSelected)
-            {
-                mesh_renderer.material = default_shader;
-            }
-        }*/
+            material.EnableKeyword("_EMISSION");
+        }
+    }
+
+    public void ManualHoverOff()
+    {
+        foreach (Material material in gameObject.GetComponentInChildren<Renderer>().materials)
+        {
+            material.DisableKeyword("_EMISSION");
+        }
+    }
 
 }

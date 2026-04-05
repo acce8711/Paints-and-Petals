@@ -24,7 +24,7 @@ public class Pigment : MonoBehaviour
 
     private void Start()
     {
-        pigment_count = 1000;
+        pigment_count = 12;
         pigment_count_text.text = pigment_count.ToString();
         UpdatePigmentCylinder();
     }
@@ -69,7 +69,13 @@ public class Pigment : MonoBehaviour
         pigment_count++;
         pigment_count_text.text = pigment_count.ToString();
         UpdatePigmentCylinder();
-        gameObject.GetComponent<HoverHighlight>().ManualHoverOff(gameObject.GetComponentInChildren<Outline>());
+
+        HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
+        if (hover_highlight != null)
+        {
+            gameObject.GetComponent<HoverHighlight>().ManualHoverOff();
+        }
+        
         pigment_audio.clip = sparkle_sound;
         pigment_audio.Play();
         StartCoroutine(DisplayAddFeedback());
@@ -104,7 +110,12 @@ public class Pigment : MonoBehaviour
     {
         if(other.CompareTag(accepted_flower_tag))
         {
-            gameObject.GetComponent<HoverHighlight>().ManualHoverOn(gameObject.GetComponentInChildren<Outline>());
+            HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
+            if (hover_highlight != null)
+            {
+                gameObject.GetComponent<HoverHighlight>().ManualHoverOn();
+            }
+
             other.transform.root.GetComponent<Flower>().CanBeConvertedToPigment(true, this);
         }
     }
@@ -114,7 +125,12 @@ public class Pigment : MonoBehaviour
     {
         if (other.CompareTag(accepted_flower_tag))
         {
-            gameObject.GetComponent<HoverHighlight>().ManualHoverOff(gameObject.GetComponentInChildren<Outline>());
+            HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
+            if (hover_highlight != null)
+            {
+                gameObject.GetComponent<HoverHighlight>().ManualHoverOff();
+            }
+
             other.transform.root.GetComponent<Flower>().CanBeConvertedToPigment(false, null);
         }
     }

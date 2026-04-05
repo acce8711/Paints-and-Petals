@@ -50,7 +50,7 @@ public class BucketScript : MonoBehaviour
         added_pigments_UI.Add(PIGMENT_COLOUR.WHITE_PIGMENT, null);
 
         //TEMP TO REMOVE
-        has_binder_and_solvent = true;
+        has_binder_and_solvent = false;
 
     }
 
@@ -61,6 +61,12 @@ public class BucketScript : MonoBehaviour
         if (other.CompareTag(PIGMENT_DISPENSER_TAG))
         {
             is_pigment_dispenser_above_bucket = true;
+
+            HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
+            if (hover_highlight != null)
+            {
+                gameObject.GetComponent<HoverHighlight>().ManualHoverOn();
+            }
         }
     }
 
@@ -70,6 +76,12 @@ public class BucketScript : MonoBehaviour
         if (other.CompareTag(PIGMENT_DISPENSER_TAG))
         {
             is_pigment_dispenser_above_bucket = false;
+
+            HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
+            if (hover_highlight != null)
+            {
+                gameObject.GetComponent<HoverHighlight>().ManualHoverOff();
+            }
         }
     }
 
