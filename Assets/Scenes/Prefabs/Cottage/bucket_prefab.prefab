@@ -791,6 +791,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 14e7022cdb5502141a145fd207f5245d, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75c660ed6d224ed49b0499eff8676327, type: 2}
     - target: {fileID: 919132149155446097, guid: 14e7022cdb5502141a145fd207f5245d, type: 3}
       propertyPath: m_Name
       value: bucket_model
