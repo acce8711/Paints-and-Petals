@@ -17,7 +17,7 @@ public class Pigment : MonoBehaviour
     [SerializeField] private AudioSource pigment_audio;
     [SerializeField] private AudioClip sparkle_sound;
     [SerializeField] private AudioClip paint_plop_sound;
-    [SerializeField] private AudioClip error_sound;
+    [SerializeField] private Renderer pigment_renderer;
 
     private int pigment_count;
 
@@ -52,11 +52,7 @@ public class Pigment : MonoBehaviour
                 pigment_audio.Play();
 
                 DecreasePigmentCount();
-            } else
-            {
-                pigment_audio.clip = error_sound;
-                pigment_audio.Play();
-            }
+            } 
 
         }
     }
@@ -78,7 +74,7 @@ public class Pigment : MonoBehaviour
         HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
         if (hover_highlight != null)
         {
-            gameObject.GetComponent<HoverHighlight>().ManualHoverOff();
+            gameObject.GetComponent<HoverHighlight>().ManualHoverOff(pigment_renderer);
         }
         
         pigment_audio.clip = sparkle_sound;
@@ -118,7 +114,7 @@ public class Pigment : MonoBehaviour
             HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
             if (hover_highlight != null)
             {
-                gameObject.GetComponent<HoverHighlight>().ManualHoverOn();
+                gameObject.GetComponent<HoverHighlight>().ManualHoverOn(pigment_renderer);
             }
 
             other.transform.root.GetComponent<Flower>().CanBeConvertedToPigment(true, this);
@@ -133,7 +129,7 @@ public class Pigment : MonoBehaviour
             HoverHighlight hover_highlight = gameObject.GetComponent<HoverHighlight>();
             if (hover_highlight != null)
             {
-                gameObject.GetComponent<HoverHighlight>().ManualHoverOff();
+                gameObject.GetComponent<HoverHighlight>().ManualHoverOff(pigment_renderer);
             }
 
             other.transform.root.GetComponent<Flower>().CanBeConvertedToPigment(false, null);

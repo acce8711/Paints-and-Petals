@@ -34,20 +34,42 @@ public class HoverHighlight : MonoBehaviour
         }
     }
 
-    public void ManualHoverOn()
+    public void ManualHoverOn(Renderer mesh_renderer = null)
     {
-        foreach (Material material in transform.GetComponentInChildren<Renderer>().materials)
+        if(mesh_renderer != null)
         {
-            material.EnableKeyword("_EMISSION");
+            foreach (Material material in mesh_renderer.materials)
+            {
+                material.EnableKeyword("_EMISSION");
+            }
         }
+        else
+        {
+            foreach (Material material in transform.GetComponentInChildren<Renderer>().materials)
+            {
+                material.EnableKeyword("_EMISSION");
+            }
+        }
+        
     }
 
-    public void ManualHoverOff()
+    public void ManualHoverOff(Renderer mesh_renderer = null)
     {
-        foreach (Material material in gameObject.GetComponentInChildren<Renderer>().materials)
+        if (mesh_renderer != null)
         {
-            material.DisableKeyword("_EMISSION");
+            foreach (Material material in mesh_renderer.materials)
+            {
+                material.DisableKeyword("_EMISSION");
+            }
         }
+        else
+        {
+            foreach (Material material in gameObject.GetComponentInChildren<Renderer>().materials)
+            {
+                material.DisableKeyword("_EMISSION");
+            }
+        }
+        
     }
 
 }

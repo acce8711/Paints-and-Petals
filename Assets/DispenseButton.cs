@@ -10,7 +10,6 @@ public class DispenseButton : MonoBehaviour
     public GameObject dispenserParticles;
     public AudioSource audio_player;
     public AudioClip pour_sound;
-    public AudioClip error_sound;
 
     // Start is called before the first frame update
     void Start()
@@ -47,10 +46,6 @@ public class DispenseButton : MonoBehaviour
             audio_player.clip = pour_sound;
             audio_player.Play();
 
-        } else
-        {
-            audio_player.clip = error_sound;
-            audio_player.Play();
-        }
+        } 
     }
 }

@@ -294,7 +294,6 @@ MonoBehaviour:
   pigment_audio: {fileID: 6465582987161056801}
   sparkle_sound: {fileID: 8300000, guid: ac49f5d2740c1f7498e304f64e5cb51b, type: 3}
   paint_plop_sound: {fileID: 8300000, guid: 4438d72339920094f87f39b20a43b7bc, type: 3}
-  error_sound: {fileID: 8300000, guid: 70a94693b6d8254438d8f7aa6a0f1ab5, type: 3}
 --- !u!65 &1817322011355158996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1372,7 +1371,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_TargetDisplay: 0
 --- !u!114 &7759858314946489536
 MonoBehaviour:
