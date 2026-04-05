@@ -24,7 +24,7 @@ public class Pigment : MonoBehaviour
 
     private void Start()
     {
-        pigment_count = 12;
+        pigment_count = 1000;
         pigment_count_text.text = pigment_count.ToString();
         UpdatePigmentCylinder();
     }

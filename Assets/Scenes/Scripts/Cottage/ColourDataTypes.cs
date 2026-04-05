@@ -10,6 +10,7 @@ using static Constants;
     public Color final_colour;
     public string colour_name;
     public bool completed;
+    public GameObject poster_colour_swatch;
     public List<PigmentInfo> pigments_needed;
 }
 
