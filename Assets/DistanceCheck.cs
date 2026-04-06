@@ -8,11 +8,13 @@ public class DistanceCheck : MonoBehaviour
 {
     [SerializeField] Transform player_position;
     [SerializeField] float distance_threshold;
-    [SerializeField] GameObject flower_field;
+    //[SerializeField] GameObject flower_field;
     [SerializeField] Vector3 flower_field_position;
     [SerializeField] Constants.FIELD field_type;
 
     public GameObject prefabRef;
+
+    private GameObject flower_field;
 
     private float timer;
 
@@ -25,20 +27,20 @@ public class DistanceCheck : MonoBehaviour
             Debug.Log(distance_to_player);
             if (distance_to_player <= distance_threshold)
             {
-                if (flower_field.activeSelf)
+                /*if (flower_field.activeSelf )
                     return;
-
+*/
+                if(flower_field == null)
+                    flower_field = Instantiate(prefabRef, flower_field_position, Quaternion.identity);
                 flower_field.transform.position = flower_field_position;
-                flower_field.SetActive(true);
-                GameManager.Instance.active_field = field_type;
+                //flower_field.SetActive(true);
+                //GameManager.Instance.active_field = field_type;
 
-            } else if (GameManager.Instance.active_field == field_type)
+            } else
             {
-                flower_field.SetActive(false);
+                //flower_field.SetActive(false);
                 Destroy(flower_field);
-                flower_field = Instantiate(prefabRef, flower_field_position, Quaternion.identity);
-                flower_field.SetActive(false);
-                GameManager.Instance.active_field = Constants.FIELD.NONE;
+                //GameManager.Instance.active_field = Constants.FIELD.NONE;
             }
         }
     }

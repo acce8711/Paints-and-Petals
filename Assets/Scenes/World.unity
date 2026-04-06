@@ -834,7 +834,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_position: {fileID: 830261848}
   distance_threshold: 150
-  flower_field: {fileID: 1726709458}
   flower_field_position: {x: 19.06, y: -0.39, z: 20.79}
   field_type: 3
   prefabRef: {fileID: 9126985364246677761, guid: a2ccf02e6016bc744b9d5ca06c90c4b9, type: 3}
@@ -1279,7 +1278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20260,7 +20259,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_position: {fileID: 830261848}
   distance_threshold: 150
-  flower_field: {fileID: 1726709458}
   flower_field_position: {x: 0, y: -0.39, z: 36.37}
   field_type: 2
   prefabRef: {fileID: 9126985364246677761, guid: a2ccf02e6016bc744b9d5ca06c90c4b9, type: 3}
@@ -21599,7 +21597,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_position: {fileID: 830261848}
   distance_threshold: 150
-  flower_field: {fileID: 1726709458}
   flower_field_position: {x: -18.58, y: -0.39, z: 20.79}
   field_type: 1
   prefabRef: {fileID: 9126985364246677761, guid: a2ccf02e6016bc744b9d5ca06c90c4b9, type: 3}
@@ -24741,11 +24738,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 214863894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1726709458 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9126985364246677761, guid: a2ccf02e6016bc744b9d5ca06c90c4b9, type: 3}
-  m_PrefabInstance: {fileID: 3847720765061180127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1744785485
 GameObject:
   m_ObjectHideFlags: 0
