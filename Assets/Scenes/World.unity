@@ -1749,6 +1749,7 @@ GameObject:
   - component: {fileID: 214863894}
   - component: {fileID: 214863896}
   - component: {fileID: 214863895}
+  - component: {fileID: 214863897}
   m_Layer: 0
   m_Name: pigment_dispenser_socket_prefab - yellow
   m_TagString: Untagged
@@ -1789,7 +1790,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.06
   m_Height: 0.3
@@ -1812,7 +1813,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4
+    m_Bits: 64
   m_AttachTransform: {fileID: 1702314362}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -1855,6 +1856,27 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!135 &214863897
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214863893}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.37
+  m_Center: {x: 0, y: 0.19, z: 0}
 --- !u!1 &223587500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,6 +2302,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 8946865315204081592}
+    - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4941,6 +4967,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8946865315204081592}
     - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4971,6 +5001,10 @@ PrefabInstance:
     - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418401335331183930, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8611620945301567944, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6230,6 +6264,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 8946865315204081592}
+    - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -14352,6 +14390,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8946865315204081592}
     - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 132
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -14382,6 +14424,10 @@ PrefabInstance:
     - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418401335331183930, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8611620945301567944, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -14637,6 +14683,7 @@ GameObject:
   - component: {fileID: 927569160}
   - component: {fileID: 927569162}
   - component: {fileID: 927569161}
+  - component: {fileID: 927569163}
   m_Layer: 0
   m_Name: pigment_dispenser_socket_prefab - white
   m_TagString: Untagged
@@ -14677,7 +14724,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.06
   m_Height: 0.3
@@ -14700,7 +14747,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4
+    m_Bits: 128
   m_AttachTransform: {fileID: 120939682}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -14743,6 +14790,27 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!135 &927569163
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927569159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.37
+  m_Center: {x: 0, y: 0.19, z: 0}
 --- !u!1 &944172760
 GameObject:
   m_ObjectHideFlags: 0
@@ -15092,6 +15160,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8946865315204081592}
     - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -15122,6 +15194,10 @@ PrefabInstance:
     - target: {fileID: 8277160285318814033, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418401335331183930, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 8611620945301567944, guid: 61ca11103bb985149ad7ca310a8c177a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16332,6 +16408,7 @@ GameObject:
   - component: {fileID: 1056634192}
   - component: {fileID: 1056634194}
   - component: {fileID: 1056634193}
+  - component: {fileID: 1056634195}
   m_Layer: 0
   m_Name: pigment_dispenser_socket_prefab - black
   m_TagString: Untagged
@@ -16372,7 +16449,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.06
   m_Height: 0.3
@@ -16395,7 +16472,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4
+    m_Bits: 256
   m_AttachTransform: {fileID: 500819642}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -16438,6 +16515,27 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!135 &1056634195
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056634191}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.37
+  m_Center: {x: 0, y: 0.19, z: 0}
 --- !u!1 &1071290104
 GameObject:
   m_ObjectHideFlags: 0
@@ -23380,6 +23478,7 @@ GameObject:
   - component: {fileID: 1533588966}
   - component: {fileID: 1533588968}
   - component: {fileID: 1533588967}
+  - component: {fileID: 1533588969}
   m_Layer: 0
   m_Name: pigment_dispenser_socket_prefab - blue
   m_TagString: Untagged
@@ -23420,7 +23519,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.06
   m_Height: 0.3
@@ -23443,7 +23542,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4
+    m_Bits: 32
   m_AttachTransform: {fileID: 544406850}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -23486,6 +23585,27 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!135 &1533588969
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533588965}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.37
+  m_Center: {x: 0, y: 0.19, z: 0}
 --- !u!1 &1561971594
 GameObject:
   m_ObjectHideFlags: 0
@@ -29438,8 +29558,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 47.33
-  m_Center: {x: 0.31, y: 19.92957, z: -0.026517445}
+  m_Radius: 66.9
+  m_Center: {x: -21.6, y: 19.92957, z: -0.026517445}
 --- !u!114 &2146957482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29929,7 +30049,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4
+    m_Bits: 16
   m_AttachTransform: {fileID: 4092630518984075742}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -30504,7 +30624,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.06
   m_Height: 0.3
@@ -30521,6 +30641,7 @@ GameObject:
   - component: {fileID: 1304924920242813626}
   - component: {fileID: 2856949284876805637}
   - component: {fileID: 7217773421639698622}
+  - component: {fileID: 7315530162724503184}
   m_Layer: 0
   m_Name: pigment_dispenser_socket_prefab - red
   m_TagString: Untagged
@@ -30528,6 +30649,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!135 &7315530162724503184
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315530162724503183}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.37
+  m_Center: {x: 0, y: 0.19, z: 0}
 --- !u!114 &7792380886627430323 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 766323742688137336, guid: 479ada4e2b0f8ba41bf5f0a381d4b994, type: 3}
