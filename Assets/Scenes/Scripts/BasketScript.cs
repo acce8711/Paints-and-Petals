@@ -63,7 +63,7 @@ public class BasketScript : MonoBehaviour
 
     }
 
-    public void grabRedFlower(ActivateEventArgs args)
+    public void grabRedFlower(SelectEnterEventArgs args)
     {
         newFlower = Instantiate(redFlowerPrefab);
         interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
@@ -73,7 +73,7 @@ public class BasketScript : MonoBehaviour
             redFlowerPreview.SetActive(false);
         }
     }
-    public void grabBlueFlower(ActivateEventArgs args)
+    public void grabBlueFlower(SelectEnterEventArgs args)
     {
         newFlower = Instantiate(blueFlowerPrefab);
         interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
@@ -84,7 +84,7 @@ public class BasketScript : MonoBehaviour
         }
 
     }
-    public void grabYellowFlower(ActivateEventArgs args)
+    public void grabYellowFlower(SelectEnterEventArgs args)
     {
         newFlower = Instantiate(yellowFlowerPrefab);
         interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
@@ -94,7 +94,7 @@ public class BasketScript : MonoBehaviour
             yellowFlowerPreview.SetActive(false);
         }
     }
-    public void grabWhiteFlower(ActivateEventArgs args)
+    public void grabWhiteFlower(SelectEnterEventArgs args)
     {
         newFlower = Instantiate(whiteFlowerPrefab);
         interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());
@@ -105,7 +105,7 @@ public class BasketScript : MonoBehaviour
         }
 
     }
-    public void grabBlackFlower(ActivateEventArgs args)
+    public void grabBlackFlower(SelectEnterEventArgs args)
     {
         newFlower = Instantiate(blackFlowerPrefab);
         interaction_manager.SelectEnter((IXRSelectInteractor)args.interactorObject, newFlower.GetComponent<XRGrabInteractable>());

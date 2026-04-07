@@ -24,7 +24,7 @@ public class BucketManager : MonoBehaviour
     }
 
     //creates a new bucket when the player clicks on the bucket stack
-    public void NewBucket(ActivateEventArgs args)
+    public void NewBucket(SelectEnterEventArgs args)
     {
         //only create a new bucket if another one doesn't already exist
         if (current_bucket != null)
